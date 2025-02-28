@@ -10,9 +10,312 @@
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="bg-red-500">
-    <h1>Assignment 05</h1>
+
+  <body>
+    <!-- wrapper  -->
+    <div
+      id="js-random-background"
+      class="max-w-[1816px] mx-auto font-[Poppins,sans-serif] bg-[rgba(244,247,255,1)] border border-transparent"
+    >
+      <!-- * main wrapper  -->
+      <div class="max-w-[1536px] mx-auto pb-20">
+        <nav
+          class="flex justify-between items-center p-6 mt-6 mb-[20px] bg-white rounded-2xl"
+        >
+          <!-- right side -->
+          <div class="flex items-center gap-3">
+            <img src="assets/logo.png" alt="" class="aspect-square max-w-13" />
+            <h1 class="text-3xl font-light">
+              Dev<span class="font-extrabold">Board</span>
+            </h1>
+          </div>
+          <!-- left side -->
+          <div class="flex items-center gap-9">
+            <div
+              class="flex items-center gap-3 bg-[rgba(244,247,255,1)] py-3 px-4 rounded-full"
+            >
+              <img src="assets/checkbox.png" alt="checkbox " />
+              <span id="js-task-completion" class="font-bold text-3xl">23</span>
+            </div>
+            <div
+              id="js-change-bg-btn"
+              class="p-2 bg-[rgba(244,247,255,1)] rounded-full"
+            >
+              <img src="assets/theme-btn.png" alt="theme btn" />
+            </div>
+          </div>
+        </nav>
+
+        <!-- main content -->
+        <main class="grid grid-cols-4 gap-6 grid-rows-1">
+          <!-- left side -->
+          <section class="col-span-3 bg-white rounded-2xl">
+            <!-- links container -->
+            <div class="grid grid-cols-4 gap-6 px-6 pt-6 pb-8 min-h-[185px]">
+              <!-- task assigned section -->
+              <div
+                class="flex items-center gap-5 bg-[rgba(244,247,255,1)] rounded-xl justify-center"
+              >
+                <div class="p-4 bg-white rounded-full">
+                  <img src="assets/checkbox.png" alt="" />
+                </div>
+                <div class="">
+                  <p class="text-[rgba(0,48,60,1)]">Task Assigned</p>
+                  <span id="js-task-assigned" class="text-3xl font-bold"
+                    >05</span
+                  >
+                </div>
+              </div>
+              <!-- discover something section -->
+              <div
+                class="flex col-span-2 items-center gap-5 bg-[linear-gradient(45deg,#3752FD_0%,#6C7FFA_53%,#9BA8F8_100%)] rounded-xl pl-10"
+                id="js-discover-btn"
+              >
+                <div class="">
+                  <img src="assets/board.png" alt="" />
+                </div>
+                <p class="text-white text-2xl max-w-[295px]">
+                  Discover Something New Today!
+                </p>
+              </div>
+              <!-- todays date section -->
+              <div
+                class="flex items-center gap-5 bg-[rgba(244,247,255,1)] rounded-xl pl-6"
+              >
+                <div class="p-4 bg-white rounded-full">
+                  <img src="assets/calender.png" alt="" />
+                </div>
+                <div class="">
+                  <p class="text-[rgba(0,48,60,1)] text-xl">Wed ,</p>
+                  <span class="text-xl font-bold" id="js-current-date"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- dashed border  -->
+            <div
+              class="border-b border-dashed border-[rgba(55,82,253,0.2)]"
+            ></div>
+            <!-- Tasks Container  -->
+            <div class="py-8 px-6 grid gap-9 grid-cols-3 tasks-container">
+              <!-- single item -->
+              <div class="bg-[rgba(244,247,255,1)] rounded-xl px-6 pt-6 pb-5">
+                <div class="flex flex-col gap-4 items-start">
+                  <span class="py-2 px-4 bg-white rounded-lg">CloudSync</span>
+                  <h2 class="text-2xl font-medium">Add Dark Mode</h2>
+                  <div class="bg-white p-4 rounded-lg max-h-[92px]">
+                    <p class="line-clamp-2 text-base text-gray-400 bg-white">
+                      Store the user's preference in localStorage, update CSS
+                      variables dynamically, and apply a smooth transition
+                      effect.
+                    </p>
+                  </div>
+                </div>
+                <!-- dashed border -->
+                <div
+                  class="border-b border-dashed border-[rgba(55,82,253,0.2)] my-3"
+                ></div>
+                <!-- last content -->
+                <div class="flex items-center justify-between">
+                  <div class="">
+                    <p class="text-sm">Deadline</p>
+                    <p class="font-medium">21 March 2025</p>
+                  </div>
+                  <button
+                    class="complete-btn font-medium text-white py-[10px] px-5 bg-[rgba(55,82,253,1)] rounded-lg cursor-pointer"
+                  >
+                    Completed
+                  </button>
+                </div>
+              </div>
+              <!-- single item -->
+              <div class="bg-[rgba(244,247,255,1)] rounded-xl px-6 pt-6 pb-5">
+                <div class="flex flex-col gap-4 items-start">
+                  <span class="py-2 px-4 bg-white rounded-lg">SwiftPay</span>
+                  <h2 class="text-2xl font-medium">Optimize Home page</h2>
+                  <div class="bg-white p-4 rounded-lg max-h-[92px]">
+                    <p class="line-clamp-2 text-base text-gray-400 bg-white">
+                      Debug using Chrome DevTools, check for overlapping
+                      elements, and ensure onClick works properly and ensure
+                      onClick works properly
+                    </p>
+                  </div>
+                </div>
+                <!-- dashed border -->
+                <div
+                  class="border-b border-dashed border-[rgba(55,82,253,0.2)] my-3"
+                ></div>
+                <!-- last content -->
+                <div class="flex items-center justify-between">
+                  <div class="">
+                    <p class="text-sm">Deadline</p>
+                    <p class="font-medium">21 March 2025</p>
+                  </div>
+                  <button
+                    class="complete-btn font-medium text-white py-[10px] px-5 bg-[rgba(55,82,253,1)] rounded-lg cursor-pointer"
+                  >
+                    Completed
+                  </button>
+                </div>
+              </div>
+              <!-- single item -->
+              <div class="bg-[rgba(244,247,255,1)] rounded-xl px-6 pt-6 pb-5">
+                <div class="flex flex-col gap-4 items-start">
+                  <span class="py-2 px-4 bg-white rounded-lg">Meta</span>
+                  <h2 class="text-2xl font-medium">Add new emoji 🤲</h2>
+                  <div class="bg-white p-4 rounded-lg max-h-[92px]">
+                    <p class="line-clamp-2 text-base text-gray-400 bg-white">
+                      Debug using Chrome DevTools, check for overlapping
+                      elements, and ensure onClick works properly and ensure
+                      onClick works properly
+                    </p>
+                  </div>
+                </div>
+                <!-- dashed border -->
+                <div
+                  class="border-b border-dashed border-[rgba(55,82,253,0.2)] my-3"
+                ></div>
+                <!-- last content -->
+                <div class="flex items-center justify-between">
+                  <div class="">
+                    <p class="text-sm">Deadline</p>
+                    <p class="font-medium">21 March 2025</p>
+                  </div>
+                  <button
+                    class="complete-btn font-medium text-white py-[10px] px-5 bg-[rgba(55,82,253,1)] rounded-lg cursor-pointer"
+                  >
+                    Completed
+                  </button>
+                </div>
+              </div>
+              <!-- single item -->
+              <div class="bg-[rgba(244,247,255,1)] rounded-xl px-6 pt-6 pb-5">
+                <div class="flex flex-col gap-4 items-start">
+                  <span class="py-2 px-4 bg-white rounded-lg">ShopEase</span>
+                  <h2 class="text-2xl font-medium">Fix Mobile Button Issue</h2>
+                  <div class="bg-white p-4 rounded-lg max-h-[92px]">
+                    <p class="line-clamp-2 text-base text-gray-400 bg-white">
+                      Debug using Chrome DevTools, check for overlapping
+                      elements, and ensure onClick works properly and ensure
+                      onClick works properly
+                    </p>
+                  </div>
+                </div>
+                <!-- dashed border -->
+                <div
+                  class="border-b border-dashed border-[rgba(55,82,253,0.2)] my-3"
+                ></div>
+                <!-- last content -->
+                <div class="flex items-center justify-between">
+                  <div class="">
+                    <p class="text-sm">Deadline</p>
+                    <p class="font-medium">21 March 2025</p>
+                  </div>
+                  <button
+                    class="complete-btn font-medium text-white py-[10px] px-5 bg-[rgba(55,82,253,1)] rounded-lg cursor-pointer"
+                  >
+                    Completed
+                  </button>
+                </div>
+              </div>
+              <!-- single item -->
+              <div class="bg-[rgba(244,247,255,1)] rounded-xl px-6 pt-6 pb-5">
+                <div class="flex flex-col gap-4 items-start">
+                  <span class="py-2 px-4 bg-white rounded-lg">Google LLC</span>
+                  <h2 class="text-2xl font-medium">Integrate OpenAI API</h2>
+                  <div class="bg-white p-4 rounded-lg max-h-[92px]">
+                    <p class="line-clamp-2 text-base text-gray-400 bg-white">
+                      Debug using Chrome DevTools, check for overlapping
+                      elements, and ensure onClick works properly and ensure
+                      onClick works properly
+                    </p>
+                  </div>
+                </div>
+                <!-- dashed border -->
+                <div
+                  class="border-b border-dashed border-[rgba(55,82,253,0.2)] my-3"
+                ></div>
+                <!-- last content -->
+                <div class="flex items-center justify-between">
+                  <div class="">
+                    <p class="text-sm">Deadline</p>
+                    <p class="font-medium">21 March 2025</p>
+                  </div>
+                  <button
+                    class="complete-btn font-medium text-white py-[10px] px-5 bg-[rgba(55,82,253,1)] rounded-lg cursor-pointer"
+                  >
+                    Completed
+                  </button>
+                </div>
+              </div>
+              <!-- single item -->
+              <div class="bg-[rgba(244,247,255,1)] rounded-xl px-6 pt-6 pb-5">
+                <div class="flex flex-col gap-4 items-start">
+                  <span class="py-2 px-4 bg-white rounded-lg">Glassdoor</span>
+                  <h2 class="text-2xl font-medium">Improve Job searching</h2>
+                  <div class="bg-white p-4 rounded-lg max-h-[92px]">
+                    <p class="line-clamp-2 text-base text-gray-400 bg-white">
+                      Debug using Chrome DevTools, check for overlapping
+                      elements, and ensure onClick works properly and ensure
+                      onClick works properly
+                    </p>
+                  </div>
+                </div>
+                <!-- dashed border -->
+                <div
+                  class="border-b border-dashed border-[rgba(55,82,253,0.2)] my-3"
+                ></div>
+                <!-- last content -->
+                <div class="flex items-center justify-between">
+                  <div class="">
+                    <p class="text-sm">Deadline</p>
+                    <p class="font-medium">21 March 2025</p>
+                  </div>
+                  <button
+                    class="complete-btn font-medium text-white py-[10px] px-5 bg-[rgba(55,82,253,1)] rounded-lg cursor-pointer"
+                  >
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- section sidebar -->
+          <section class="rounded-2xl bg-white py-6">
+            <h4 class="flex justify-center gap-4">
+              <img src="assets/activity.png" alt="" />
+              <span class="font-medium text-xl">Activity log</span>
+            </h4>
+            <button
+              class="font-medium text-white py-[10px] px-5 bg-[rgba(55,82,253,1)] block mx-auto mt-4 rounded-lg cursor-pointer"
+              id="js-clear-history-btn"
+            >
+              Clear History
+            </button>
+            <div
+              class="border-b border-dashed border-[rgba(55,82,253,0.2)] mt-3 mb-6"
+            ></div>
+            <!-- task history section -->
+            <div class="pr-8 pl-4 space-y-7" id="js-task-histories">
+              <!-- <p class="p-[10px] bg-[rgba(244,247,255,1)]">
+                You have Complete The Task Add Dark Mode at 12:48:15 PM
+              </p>
+              <p class="p-[10px] bg-[rgba(244,247,255,1)]">
+                You have Complete The Task Add Dark Mode at 12:48:15 PM
+              </p> -->
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>
