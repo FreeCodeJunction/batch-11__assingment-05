@@ -17,8 +17,9 @@ discoverBtn.addEventListener("click", function () {
 });
 
 // setting the current date in nav section
-currentDateElement.innerText = new Date().toDateString().slice(4);
-
+const date = new Date().toDateString();
+currentDateElement.innerText = date.slice(4);
+currentDateElement.previousElementSibling.innerText = date.slice(0, 3) + " ,";
 // setting the active task
 taskAssignedBtn.innerText = tasksActiveNumber.toString().padStart(2, "0");
 taskCompletion.innerText = taskCompletedNumber;

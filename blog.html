@@ -4,8 +4,160 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blogs Web</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Blog HTML File</h1>
+    <div
+      id="js-random-background"
+      class="max-w-[1816px] mx-auto font-[Poppins,sans-serif] bg-[rgba(244,247,255,1)] border border-transparent"
+    >
+      <!-- * main wrapper  -->
+      <div class="max-w-[1536px] mx-auto pb-20">
+        <nav
+          class="flex justify-between items-center p-6 mt-6 mb-[20px] bg-white rounded-2xl"
+        >
+          <!-- right side -->
+          <div class="flex items-center gap-3">
+            <img src="assets/logo.png" alt="" class="aspect-square max-w-13" />
+            <h1 class="text-3xl font-light">
+              Dev<span class="font-extrabold">Board</span>
+            </h1>
+          </div>
+          <!-- left side -->
+          <button
+            class="font-medium text-white py-[10px] px-5 bg-[rgba(55,82,253,1)] rounded-lg cursor-pointer"
+            id="js-back-to-desk-btn"
+          >
+            Back to Desk
+          </button>
+        </nav>
+        <main>
+          <h2 class="text-3xl font-bold text-center">Blogs</h2>
+          <!-- question container  -->
+          <div class="space-y-6 mt-4">
+            <!-- single items -->
+            <div class="bg-white p-6 rounded-lg">
+              <h3 class="text-xl font-bold">
+                Question-1: What are the different ways to select an element in
+                the dom?
+              </h3>
+              <!-- dashed border -->
+
+              <div
+                class="border-b border-dashed border-[rgba(55,82,253,0.2)] my-3"
+              ></div>
+              <!-- answer -->
+              <p class="text-gray-400 pr-5">
+                There are many different ways to select an element in the dom.
+                To select a single element we can use the "getElementById()" and
+                "querySelector()" method DOM provides. The "getElementById()"
+                method select an element with their id's and the
+                "querySelector()" method selects an element by using a css
+                selector. To select multiple elements in the dom, there are
+                getElementsByClassName() , getElementsByTagName(),
+                querySelectorAll() method .
+              </p>
+            </div>
+            <!-- single item -->
+            <div class="bg-white p-6 rounded-lg">
+              <h3 class="text-xl font-bold">
+                Question-2: What is the difference between innerHTML, innerText,
+                and textContent ?
+              </h3>
+              <!-- dashed border -->
+
+              <div
+                class="border-b border-dashed border-[rgba(55,82,253,0.2)] my-3"
+              ></div>
+              <!-- answer -->
+              <p class="text-gray-400 pr-5">
+                "innerHTML": It returns or sets the html content of an element
+                including tags , spaces , attributes. If we sets an element's
+                content with innerHTML , the content will act or behave like
+                html. <br />
+                "innerText": It returns or sets the text content of an element.
+                It doesn't show the spaces , tags , anything other that the
+                visible text content. <br />
+                "textContent": It returns or sets the text content of an element
+                . If the elements contains multiple spaces , it also shows them.
+              </p>
+            </div>
+            <!-- single item -->
+            <div class="bg-white p-6 rounded-lg">
+              <h3 class="text-xl font-bold">
+                Question-3: What is event delegation in the DOM?
+              </h3>
+              <!-- dashed border -->
+
+              <div
+                class="border-b border-dashed border-[rgba(55,82,253,0.2)] my-3"
+              ></div>
+              <!-- answer -->
+              <p class="text-gray-400 pr-5">
+                When we have a situation where we need to attach event listeners
+                to multiple child elements who are descendent of the same parent
+                , instead of attaching event listeners to every single one of
+                them we add an event listener to the parent element and based on
+                event bubbling , we determine which child triggered the event.
+              </p>
+            </div>
+            <!-- single item -->
+            <div class="bg-white p-6 rounded-lg">
+              <h3 class="text-xl font-bold">
+                Question-4: What is event bubbling in the DOM?
+              </h3>
+              <!-- dashed border -->
+
+              <div
+                class="border-b border-dashed border-[rgba(55,82,253,0.2)] my-3"
+              ></div>
+              <!-- answer -->
+              <p class="text-gray-400 pr-5">
+                Event bubbling in javascript is when an event listener is
+                triggered , how it propagates through its ancestor. When an
+                event is triggered by an element, the event is bubbled up from
+                the targeted element to its parent and ancestor elements until
+                it reaches the root or the html element.
+              </p>
+            </div>
+            <!-- single item -->
+            <div class="bg-white p-6 rounded-lg">
+              <h3 class="text-xl font-bold">
+                Question-5: How do you create, add, and remove elements using
+                JavaScript?
+              </h3>
+              <!-- dashed border -->
+
+              <div
+                class="border-b border-dashed border-[rgba(55,82,253,0.2)] my-3"
+              ></div>
+              <!-- answer -->
+              <p class="text-gray-400 pr-5">
+                We can create element with the document.createElement() method.
+                Then to add the element into the dom, we can use the append or
+                the appendChild method. Also there are so many methods to add
+                html content or element in the dom like the innerHTML,
+                insertAdjacentElement , insertAdjacentHTML etc. And to remove an
+                element from the dom, the remove() , removeChild() method is
+                used. We can also use the innerHTML method to empty en html
+                element.
+              </p>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="blog.js"></script>
   </body>
 </html>
