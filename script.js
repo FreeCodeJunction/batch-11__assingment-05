@@ -42,7 +42,11 @@ tasksContainer.addEventListener("click", function (event) {
     element.setAttribute("disabled", true);
     element.classList.add("opacity-[0.2]", "transition-all");
     tasksActiveNumber--;
-    taskAssignedBtn.innerText = tasksActiveNumber.toString().padStart(2, "0");
+    taskAssignedBtn.innerText =
+      tasksActiveNumber === 0
+        ? 0
+        : tasksActiveNumber.toString().padStart(2, "0");
+
     taskCompletedNumber++;
     taskCompletion.innerText = taskCompletedNumber;
     createAndRenderHistory(element);
